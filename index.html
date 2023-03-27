@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Gerador de QR Code</title>
+  <link rel="shortcut icon" href="https://solvis.com.br/wp-content/uploads/2020/10/solvis_site_qr_code_icone_comofunciona_002_16_10_20_v1.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><span>VN</span> QR CODE</h1>
+    <div class="form">
+      <label for="url">Insira a URL:</label>
+      <input type="text" id="url" placeholder="https://exemplo.com" required>
+      <button id="gerarBtn" onclick="gerarQRCode()">Gerar QR Code</button>
+      <div class="share">
+        <button id="compartilharBtn" onclick="compartilharQRCode()">
+          <i class='bx bx-share-alt' id="share"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="qrcode-container">
+      <div id="qrcode"></div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Vntecnologia LTDA</p>
+    </footer>
+    
+    <style>
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        
+      }
+    
+      footer p {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+    
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://kit.fontawesome.com/1234567890.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
