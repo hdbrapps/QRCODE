@@ -10,11 +10,10 @@
     background-color: #333;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-      overflow-x: hidden;
   }
   
   .container {
-    max-width: 600px;
+    max-width: 570px;
     margin: 50px auto;
     padding: 30px;
     border-radius: 10px;
