@@ -39,12 +39,15 @@ gerandoEl.removeAttribute("hidden");
 gerarQRCode();
 
 function compartilharQRCode() {
-  // obter o URL do QR code
-  var qrCodeUrl = document.getElementById("qrcode").querySelector("img").getAttribute("src");
-  
-  // criar um link de compartilhamento para o URL do QR code
-  var shareLink = "whatsapp://send?text=" + encodeURIComponent(qrCodeUrl);
-  
-  // abrir o link de compartilhamento em uma nova guia
-  window.open(shareLink, "");
+  // Obtém o URL da imagem do QR Code
+  var qrcodeUrl = document.querySelector('#qrcode img').src;
+
+  // Cria o link para compartilhar no WhatsApp
+  var whatsappUrl = 'whatsapp://send?text=' + encodeURIComponent(qrcodeUrl);
+
+  // Abre o link no aplicativo do WhatsApp
+  window.location.href = whatsappUrl;
 }
+
+
+
