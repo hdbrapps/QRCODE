@@ -15,11 +15,10 @@
       <label for="url">Insira a URL:</label>
       <input type="text" id="url" placeholder="https://exemplo.com" required>
       <button id="gerarBtn" onclick="gerarQRCode()">Gerar QR Code</button>
-      <div class="share">
-        <button id="compartilharBtn" onclick="compartilharQRCode()">
-          <i class='bx bxs-share-alt' id="share"></i>
-        </button>
-      </div>
+      <button id="compartilharBtn" onclick="compartilharQRCode()">
+  <i class='bx bxs-share'></i> Compartilhar
+</button>
+
     </div>
     
     <div class="qrcode-container">
@@ -51,24 +50,10 @@
   <script src="script.js"></script>
 
   <script>
-    function compartilharQRCode() {
-      const canvas = document.querySelector('#qrcode canvas');
-      if (!canvas) return;
-      const dataURL = canvas.toDataURL('image/png');
-      const image = new Image();
-      image.src = dataURL;
-      if (navigator.share) {
-        navigator.share({
-          title: 'QR Code',
-          text: 'Veja este QR Code',
-          url: dataURL,
-        })
-          .then(() => console.log('Compartilhado com sucesso'))
-          .catch((error) => console.log('Erro ao compartilhar', error));
-      } else {
-        window.open(dataURL, '_blank');
-      }
-    }
+
+
+
+
   </script>
 
 </body>
